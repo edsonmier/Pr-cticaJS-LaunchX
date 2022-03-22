@@ -1,0 +1,278 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    width: 100%;
+    height: 5rem;
+    background-color: #FF6E6E;
+}
+
+header .lights{
+    padding-top: 0.8rem;
+    display: flex;
+    width: 40%;
+    height: 100%;
+    padding-left: 1rem;
+}
+
+header .light-big{
+    margin-top: 0.3rem;
+    border-radius: 100%;
+    width: 2.8rem;
+    height: 2.8rem;
+    background-color: #A2FFF8;
+    border: 0.1rem solid #5C5C5C;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+header .light{
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    border-radius: 100%;
+    width: 0.7rem;
+    height: 0.7rem;
+    border: 0.1rem solid #5C5C5C;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+header .green{
+    background-color: #2CFF2C;
+}
+
+header .yellow{
+    background-color: #FFF1B7;
+}
+
+header .red{
+    background-color: #FF2C2C;
+}
+
+.information{
+    width: 100%;
+    height: 20rem;
+    background-color: #FF6E6E;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.information .border{
+    width: 100%;
+    height: 6rem;
+    position: absolute;
+    top: 23rem;
+    background-color: #5C5C5C;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    z-index: -1;
+}
+
+.information .title{
+    display: flex;
+    width: 100%;
+    height: 40%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.information .title .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background-color: white;
+    height: 60%;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.information .title .box h1{
+    text-align: center;
+    width: 100%;
+    color: #5C5C5C;
+    font-size: 3rem;
+    word-break: break-all;
+}
+
+.information .message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+}
+
+.information .message h2{
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.information .entry{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+.information .entry .box{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.information .entry .box .space{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+}
+
+.information .entry .box .space .search{
+    border: none;
+    display: flex;
+    width: 10%;
+    height: 100%;
+    background-color: #5C5C5C;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    font-size: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.information .entry .box .space input{
+    font-size: 1rem;
+    border: none;
+    width: 60%;
+    height: 100%;
+    padding-left: 0.5rem;
+    border-radius: 0;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.questions .image{
+    display: flex;
+    margin-top: 4rem;
+    width: 100%;
+    height: 10rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.questions .image .box{
+    background-image: url(https://i.ibb.co/xMTbVVw/pokestarters.png);
+    background-position: center;
+    background-size: cover;
+    height: 65%;
+    width: 90%;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.questions .area{
+    display: flex;
+    width: 100%;
+    height: 20rem;
+    justify-content: center;
+}
+
+.questions .list{
+    list-style: none;
+    width: 90%;
+    padding-left: 5%;
+}
+
+.questions .list li{
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.collapsible {
+    position: relative;
+    font-weight: 600;
+    background-color: #5C5C5C;
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    z-index: 1;
+}
+  
+.active, .collapsible:hover {
+    background-color: rgb(71, 71, 71);
+}
+
+.content {
+    position: relative;
+    bottom: 1rem;
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+footer{
+    color: white;
+    position: relative;
+    display: flex;
+    margin-top: 5rem;
+    background-color: #FF6E6E;
+    width: 100%;
+    height: 5rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+footer .border{
+    position: absolute;
+    width: 100%;
+    height: 5rem;
+    bottom: 3rem;
+    background-color: #5C5C5C;
+    z-index: -1;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+footer .box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer h2{
+    font-size: 1rem;
+}
+
+footer .fa-github{
+    padding-left: 0.5rem;
+    font-size: 1rem;
+}
+
+footer .fa-instagram{
+    padding-left: 0.5rem;
+    font-size: 1rem;
+}
