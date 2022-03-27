@@ -187,14 +187,14 @@ header .entry .box .space input{
 
 .measures{
     width: 100%;
-    height: 6rem;
+    height: 5rem;
     display: flex;
     justify-content: center;
 }
 
 .measures .box{
     width: 90%;
-    height: 60%;
+    height: 70%;
     background-color:#5C5C5C;
     display: flex;
     align-items: center;
@@ -243,4 +243,123 @@ header .entry .box .space input{
     width: 50%;
     height: 100%;
 }
+
+.stats{
+
+    width: 100%;
+    height: 20rem;
+}   
+
+.stats .title{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stats .title h2{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.stats .stats-list{
+    width: 100%;
+    height: 100%;
+}
+
+.stats .stats-list li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 100%;
+    height: 30%;
+}
+
+.stats .stats-list li h3{
+    width: 20%;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.stats .stats-list li .progress-bar{
+    margin-right: 1rem;
+    justify-self: flex-end;
+    width: 50%;
+    height: 0.8rem;
+    background-color:#5C5C5C;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 15px;
+}
+
+.stats .stats-list .hp .progress-bar .progress{
+    background-color: #FF6E6E;
+    width: 50%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.stats .stats-list .atk .progress-bar .progress{
+    background-color: #FF6E6E;
+    width: 50%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.stats .stats-list .def .progress-bar .progress{
+    background-color: #FF6E6E;
+    width: 50%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.stats .stats-list .sp-atk .progress-bar .progress{
+    background-color: #FF6E6E;
+    width: 50%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.stats .stats-list .sp-def .progress-bar .progress{
+    background-color: #FF6E6E;
+    width: 50%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.stats .stats-list .spe .progress-bar .progress{
+    background-color: #FF6E6E;
+    width: 50%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.extra{
+    margin-top: 1rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.extra .list{
+    list-style: none;
+    width: 90%;
+}
+
+.extra .list li{
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+footer{
+    margin-top: 4rem;
+}
+
+
+
 
