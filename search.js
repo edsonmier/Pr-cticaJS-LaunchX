@@ -3,7 +3,8 @@ async function connectToApi() {
     let currentEntry = sessionStorage.getItem('pokemonEntry');
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${currentEntry}`);
     const pokemon = await response.json();
-    document.getElementById("pokemonNumber").textContent = `Número #${pokemon.id}`;
+    sessionStorage.setItem("pokemonId", pokemon.id);
+    document.getElementById("pokemonNumber").textContent = `NÚMERO #${pokemon.id}`;
     document.getElementById("pokemonName").textContent = `${pokemon.name.toUpperCase()}`;
     document.getElementById("pokemonSprite").src = `${pokemon.sprites.other.home.front_default}`;
     document.getElementById("firstType").textContent = `${pokemon.types[0].type.name.toUpperCase()}`;
@@ -15,8 +16,23 @@ async function connectToApi() {
     } else {
         document.getElementById("secondType-box").style.display = 'none';
     }
-    document.getElementById("weight").textContent = `${calcWeight(pokemon.weight)} kg`; 
-    document.getElementById("height").textContent = `${calcWeight(pokemon.height)} m`; 
+    document.getElementById("weight").textContent = `${calcMeasure(pokemon.weight)} kg`; 
+    document.getElementById("height").textContent = `${calcMeasure(pokemon.height)} m`; 
+    document.getElementById("hp").textContent = pokemon.stats[0].base_stat;
+    document.getElementById("atk").textContent = pokemon.stats[1].base_stat;
+    document.getElementById("def").textContent = pokemon.stats[2].base_stat;
+    document.getElementById("sp-atk").textContent = pokemon.stats[3].base_stat;
+    document.getElementById("sp-def").textContent = pokemon.stats[4].base_stat;
+    document.getElementById("spe").textContent = pokemon.stats[5].base_stat;
+    let totalStats = 255;
+    document.getElementById("hp-bar").style.width = `${(parseInt(pokemon.stats[0].base_stat) / totalStats)*100}%`;
+    document.getElementById("atk-bar").style.width = `${(parseInt(pokemon.stats[1].base_stat) / totalStats)*100}%`;
+    document.getElementById("def-bar").style.width = `${(parseInt(pokemon.stats[2].base_stat) / totalStats)*100}%`;
+    document.getElementById("sp-atk-bar").style.width = `${(parseInt(pokemon.stats[3].base_stat) / totalStats)*100}%`;
+    document.getElementById("sp-def-bar").style.width = `${(parseInt(pokemon.stats[4].base_stat) / totalStats)*100}%`;
+    document.getElementById("spe-bar").style.width = `${(parseInt(pokemon.stats[5].base_stat) / totalStats)*100}%`;
+    setMoves(pokemon.moves);
+    setAbilities(pokemon.abilities);
 }
 
 connectToApi();
@@ -79,7 +95,48 @@ function setType(type, typeBox, index){
     }
 }
 
-function calcWeight(weight){
-    let result = weight * 0.10;
+function calcMeasure(measure){
+    let result = (measure * 0.10).toFixed(1);
     return result;
+}
+
+function setMoves(list){
+    for (let i = 0; i < list.length; i++) {
+        createMove(list[i])
+    }
+}
+
+function createMove(element) {
+    var ul = document.getElementById("moveList");
+    var li = document.createElement("li");
+    var text = document.createElement("h3");
+    text.textContent = (`${element.move.name}`.replace("-"," ")).toUpperCase();
+    li.appendChild(text);
+    ul.appendChild(li);
+}
+
+function setAbilities(list){
+    for (let i = 0; i < list.length; i++) {
+        createAbility(list[i])
+    }
+}
+
+function createAbility(element){
+    var ul = document.getElementById("abilityList");
+    var li = document.createElement("li");
+    var text = document.createElement("h3");
+    text.textContent = (`${element.ability.name}`.replace("-"," ")).toUpperCase();
+    li.appendChild(text);
+    ul.appendChild(li);
+}
+
+
+function goToPast(){
+    sessionStorage.setItem('pokemonEntry', sessionStorage.getItem("pokemonId")-1);
+    location.reload();
+}
+
+function goToNext(){
+    sessionStorage.setItem('pokemonEntry', `${parseInt(sessionStorage.getItem("pokemonId"))+1}`);
+    location.reload();
 }

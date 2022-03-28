@@ -36,24 +36,24 @@
     <section class="information">
         <div class="border"></div>
         <div class="subtitle">
-            <button class="past">
+            <button onclick="goToPast()" class="past">
                 <i class="fa-solid fa-caret-left"></i>
             </button>
             <div class="box">
-                <h2 id="pokemonNumber">NÚMERO #0</h2>
+                <h2 id="pokemonNumber">NÚMERO ???</h2>
             </div>
-            <button class="next">
+            <button onclick="goToNext()" class="next">
                 <i class="fa-solid fa-caret-right"></i>
             </button>
         </div>
         <div class="title">
             <div class="box">
-                <h1 id="pokemonName">NOMBRE</h1>
+                <h1 id="pokemonName">DESCONOCIDO</h1>
             </div>
         </div>
         <div class="frame-space">
             <div class="frame">
-                <img id="pokemonSprite" src="" alt="">
+                <img id="pokemonSprite" src="https://cdn-icons-png.flaticon.com/512/0/827.png" alt="">
             </div>
         </div>
     </section>
@@ -101,46 +101,46 @@
         </div>
         <div class="stats-space">
             <ul class="stats-list">
-                <li class="hp" id="hp">
+                <li class="hp">
                     <h3>HP</h3>
-                    <h3>68</h3>
+                    <h3 id="hp">0</h3>
                     <div class="progress-bar">
-                        <div class="progress"></div>
+                        <div id="hp-bar" class="progress"></div>
                     </div>
                 </li>
-                <li class="atk" id="atk">
+                <li class="atk">
                     <h3>ATK</h3>
-                    <h3>68</h3>
+                    <h3 id="atk">0</h3>
                     <div class="progress-bar">
-                        <div class="progress"></div>
+                        <div id="atk-bar" class="progress"></div>
                     </div>
                 </li>
-                <li class="def" id="def">
+                <li class="def">
                     <h3>DEF</h3>
-                    <h3>68</h3>
+                    <h3 id="def">0</h3>
                     <div class="progress-bar">
-                        <div class="progress"></div>
+                        <div id="def-bar" class="progress"></div>
                     </div>
                 </li>
-                <li class="sp-atk" id="sp-atk">
+                <li class="sp-atk">
                     <h3>SP ATK</h3>
-                    <h3>68</h3>
+                    <h3 id="sp-atk">0</h3>
                     <div class="progress-bar">
-                        <div class="progress"></div>
+                        <div id="sp-atk-bar" class="progress"></div>
                     </div>
                 </li>
-                <li class="sp-def" id="sp-def">
+                <li class="sp-def">
                     <h3>SP DEF</h3>
-                    <h3>68</h3>
+                    <h3 id="sp-def">0</h3>
                     <div class="progress-bar">
-                        <div class="progress"></div>
+                        <div id="sp-def-bar" class="progress"></div>
                     </div>
                 </li>
-                <li class="spe" id="spe">
+                <li class="spe">
                     <h3>SPE</h3>
-                    <h3>68</h3>
+                    <h3 id="spe">0</h3>
                     <div class="progress-bar">
-                        <div class="progress"></div>
+                        <div id="spe-bar" class="progress"></div>
                     </div>
                 </li>
             </ul>
@@ -154,7 +154,9 @@
                 </button>
                 <div class="content">
                     <br>
-                    <p>Movimientos</p>
+                    <ul id="moveList" class="movements-list">
+
+                    </ul>
                     <br>
                 </div>
             </li>
@@ -164,7 +166,9 @@
                 </button>
                 <div class="content">
                     <br>
-                    <p>Habilidades</p>
+                    <ul id="abilityList" class="abilities-list">
+
+                    </ul>
                     <br>
                 </div>
             </li>

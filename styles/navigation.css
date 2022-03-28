@@ -95,6 +95,11 @@ header .entry .box .space input{
     align-items: baseline;
 }
 
+.information .title .box h1{
+    font-size: 2rem;
+    overflow-wrap: break-word;
+}
+
 .information .frame-space{
     display: flex;
     align-items: center;
@@ -117,9 +122,8 @@ header .entry .box .space input{
 }
 
 .information .frame-space .frame img{
-    height: 100%;
+    height: 80%;
     width: auto;
-    padding-bottom: 3rem;
 }
 
 .data{
@@ -214,7 +218,7 @@ header .entry .box .space input{
 }
 
 .measures .box .text .info{
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .measures .box .text .title{
@@ -346,8 +350,32 @@ header .entry .box .space input{
 }
 
 .extra .list li{
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.extra .list li .content .movements-list{
+    padding-left: 1rem;
+    list-style:square;
+    columns: 2;
+    font-size: 0.6rem;
+    text-align: center;
+}
+
+.extra .list li .content .movements-list li{
+    display: inline;
+}
+
+.extra .list li .content .abilities-list{
+    padding-left: 1rem;
+    list-style:square;
+    columns: 2;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.extra .list li .content .abilities-list li{
+    display: inline;
 }
 
 footer{
