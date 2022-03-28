@@ -159,12 +159,7 @@ header .entry .box .space input{
     display: flex;
 }
 
-.data .types-space .types-list .second-type{
-    display: flex;
-}
-
 .data .types-space .types-list .first-type .box{
-    background-color: #FF50DD;
     height: 100%;
     width: 100%;
     display: flex;
@@ -175,7 +170,6 @@ header .entry .box .space input{
 }
 
 .data .types-space .types-list .second-type .box{
-    background-color: #AD5700;
     height: 100%;
     width: 100%;
     display: flex;

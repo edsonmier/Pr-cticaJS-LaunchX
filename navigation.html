@@ -25,10 +25,10 @@
         <div class="entry">
             <div class="box">
                 <div class="space">
-                    <button class="search">
+                    <button class="search" onclick="searchOnClick(this)">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
-                    <input type="text" placeholder="Busca un Pokémon...">
+                    <input type="text" placeholder="Busca un Pokémon..." id="pokemon-entry" class="pokemon-entry" onkeypress="search(this)">
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
                 <i class="fa-solid fa-caret-left"></i>
             </button>
             <div class="box">
-                <h2>NÚMERO #475</h2>
+                <h2 id="pokemonNumber">NÚMERO #0</h2>
             </div>
             <button class="next">
                 <i class="fa-solid fa-caret-right"></i>
@@ -48,26 +48,26 @@
         </div>
         <div class="title">
             <div class="box">
-                <h1>GALLADE</h1>
+                <h1 id="pokemonName">NOMBRE</h1>
             </div>
         </div>
         <div class="frame-space">
             <div class="frame">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/475.png" alt="">
+                <img id="pokemonSprite" src="" alt="">
             </div>
         </div>
     </section>
     <section class="data">
         <div class="types-space">
             <ul class="types-list">
-                <li class="first-type">
-                    <div class="box">
-                        <h3>PSÍQUICO</h3>
+                <li id="firstType-box" class="first-type">
+                    <div id="firstType-box-space" class="box">
+                        <h3 id="firstType"></h3>
                     </div>
                 </li>
-                <li class="second-type">
-                    <div class="box">
-                        <h3>LUCHA</h3>
+                <li id="secondType-box" class="second-type">
+                    <div id="secondType-box-space" class="box">
+                        <h3 id="secondType"></h3>
                     </div>
                 </li>
             </ul>
@@ -80,7 +80,7 @@
                     <i class="fa-solid fa-weight-scale"></i>
                 </div>
                 <div class="text">
-                    <h2 class="info">52 kg</h2>
+                    <h2 id="weight" class="info">0 kg</h2>
                     <h2 class="title">PESO</h2>
                 </div>
             </div>
@@ -89,7 +89,7 @@
                     <i class="fa-solid fa-ruler-vertical"></i>
                 </div>
                 <div class="text">
-                    <h2 class="info">1.6 m</h2>
+                    <h2 id="height" class="info">0 m</h2>
                     <h2 class="title">ALTURA</h2>
                 </div>
             </div>
@@ -179,5 +179,6 @@
         </div>
     </footer>
     <script src="./dexnav.js"></script>
+    <script src="./search.js"></script>
 </body>
 </html>

@@ -12,3 +12,24 @@ for (i = 0; i < coll.length; i++) {
     } 
   });
 }
+
+var pokemonEntry = "";
+
+function search(entry) {
+  if(event.keyCode == 13) {
+    pokemonEntry = (entry.value); 
+    pokemonEntry = pokemonEntry.toLowerCase(); 
+    sessionStorage.setItem("pokemonEntry", pokemonEntry);
+    location.replace("./navigation.html");
+  }
+}
+
+function searchOnClick(){
+  entry = document.getElementById("pokemon-entry");
+  pokemonEntry = entry.value;
+  pokemonEntry = pokemonEntry.toLowerCase(); 
+  sessionStorage.setItem("pokemonEntry", pokemonEntry);
+  location.replace("./navigation.html");
+}
+
+

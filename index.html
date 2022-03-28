@@ -35,10 +35,10 @@
         <div class="entry">
             <div class="box">
                 <div class="space">
-                    <button class="search">
+                    <button onclick="searchOnClick(this)" class="search">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
-                    <input type="text" placeholder="Busca un Pokémon...">
+                    <input type="text" placeholder="Busca un Pokémon... " id="pokemon-entry" class="pokemon-entry" onkeypress="search(this)">
                 </div>
             </div>
         </div>
